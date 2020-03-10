@@ -1,0 +1,368 @@
+1	CountLine: unsigned int(), <common.c 93>
+2	DeleteLastSlash: char*(), <common.c 76>
+3	Emalloc: long(), <common.c 40>
+4	FopenToRead: struct*(), <common.c 103>
+5	FopenToWrite: struct*(), <common.c 115>
+6	GetMailSeq: long(), <smtphead.c 83>
+7		NewMqueueEntry : <>
+8	GetSeq: int(), <smtphead.c 55>
+9		MakeHeaderIhave : <>
+10		MakeHeaderIhave_m : <>
+11	MakeHeaderIhave: void*(), <smtphead.c 181>
+12	MakeHeaderIhave_m: void*(), <smtphead.c 216>
+13	MakeMail: void*(), <smtphead.c 154>
+14	MakeWrk: void*(), <smtphead.c 125>
+15		NewMqueueEntry : 7
+16	NewMqueueEntry: char*(), <smtphead.c 142>
+17	NewString: char*(), <common.c 51>
+18		SplitString : <>
+19	ReplaceChar: char*(), <common.c 19>
+20	RunShellCommand: int(), <common.c 184>
+21	SplitString: void*(), <common.c 67>
+22	access: <>
+23		init_mid : <>
+24		main : <>
+25		mkdirrec : <>
+26	add_hash: void*(), <hash.c 105>
+27		creat_hash : <>
+28	alloc_error: void*(), <errors.c 23>
+29		Emalloc : <>
+30		NewString : <>
+31		tfcreat : <>
+32	analyze_dentaku_sys: int(), <denq.c 91>
+33		main : 24
+34	atoi: <>
+35		GetSeq : <>
+36		analyze_dentaku_sys : <>
+37		cvoldtime : <>
+38	atol: <>
+39		GetMailSeq : <>
+40		analyze_dentaku_sys : 36
+41		main : 24
+42		midtime : <>
+43	chkdfree: int(), <derrors.c 13>
+44	close: <>
+45		close_hash : <>
+46		creat_init_hash : <>
+47	close_hash: void*(), <hash.c 45>
+48		close_mid : <>
+49		init_mid : 23
+50	close_mid: void*(), <mid.c 66>
+51	config_mid: void*(), <mid.c 72>
+52		init_mid : 23
+53	copy_file: int(), <common.c 169>
+54	creat_hash: int(), <hash.c 71>
+55		config_mid : <>
+56	creat_init_hash: int(), <hash.c 52>
+57		creat_hash : 27
+58	ctime: <>
+59		errprintf : <>
+60		printtime : <>
+61	cvoldtime: long(), <wexlib.c 34>
+62		midtime : 42
+63	dirfopen: struct*(), <common.c 145>
+64	disk_error: void*(), <errors.c 30>
+65	errprintf: void*(), <errors.c 37>
+66		alloc_error : <>
+67		chkdfree : <>
+68		config_mid : 55
+69		disk_error : <>
+70		init_mid : 23
+71		tfclose : <>
+72		tfcloseall : <>
+73		tfcreat : 31
+74		tfopen : <>
+75		tfremove : <>
+76	exit: <>
+77		GetMailSeq : 39
+78		MakeWrk : <>
+79		alloc_error : 66
+80		chkdfree : 67
+81		config_mid : 55
+82		cvoldtime : 37
+83		disk_error : 69
+84		init_mid : 23
+85		loadnetdef : <>
+86		main : 24
+87		tfcreat : 31
+88		tfopen : 74
+89	fclose: <>
+90		GetMailSeq : 39
+91		GetSeq : 35
+92		MakeWrk : 78
+93		close_hash : 45
+94		creat_hash : 27
+95		cvoldtime : 37
+96		loadnetdef : 85
+97		main : 24
+98		tfclose : 71
+99		tfcloseall : 72
+100		tfopen : 74
+101		tfremove : 75
+102	fgets: <>
+103		GetMailSeq : 39
+104		GetSeq : 35
+105		analyze_dentaku_sys : 36
+106		copy_file : <>
+107		creat_hash : 27
+108		cvoldtime : 37
+109		loadnetdef : 85
+110		main : 24
+111		search_hash : <>
+112	fgetsb: char*(), <ryujilib.c 63>
+113	filetimecomp: long(), <mid.c 201>
+114		init_mid : 23
+115	findfirst: <>
+116		cvoldtime : 37
+117	findnext: <>
+118		cvoldtime : 37
+119	fnsplit: <>
+120		loadnetdef : 85
+121	fopen: <>
+122		FopenToRead : <>
+123		FopenToWrite : <>
+124		GetMailSeq : 39
+125		GetSeq : 35
+126		MakeWrk : 78
+127		creat_hash : 27
+128		cvoldtime : 37
+129		dirfopen : <>
+130		init_hash : <>
+131		main : 24
+132		opendeffile : <>
+133		tfcreat : 31
+134		tfopen : 74
+135	fprintf: <>
+136		FopenToRead : 122
+137		FopenToWrite : 123
+138		GetMailSeq : 39
+139		GetSeq : 35
+140		MakeHeaderIhave : 9
+141		MakeHeaderIhave_m : 10
+142		MakeMail : <>
+143		MakeWrk : 78
+144		RunShellCommand : <>
+145		alloc_error : 66
+146		copy_file : 106
+147		dirfopen : 129
+148		loadnetdef : 85
+149		main : 24
+150	fputc: <>
+151		MakeHeaderIhave : 9
+152		MakeMail : 142
+153		fputsNJ : <>
+154	fputs: <>
+155		MakeHeaderIhave_m : 10
+156		add_hash : <>
+157		chkdfree : 67
+158		copy_file : 106
+159		creat_hash : 27
+160		cvoldtime : 37
+161		errprintf : 59
+162		fputsNJ : 153
+163		main : 24
+164	fputsNJ: void*(), <kanji.c 18>
+165	fread: <>
+166		fgetsb : <>
+167	free: <>
+168		tfremove : 75
+169	freopen: <>
+170		GetMailSeq : 39
+171	fseek: <>
+172		add_hash : 156
+173		search_hash : 111
+174	ftell: <>
+175		add_hash : 156
+176	getdfree: <>
+177		chkdfree : 67
+178	getenv: <>
+179		MakeHeaderIhave : 9
+180		MakeHeaderIhave_m : 10
+181		main : 24
+182		opendeffile : 132
+183	getpid: <>
+184		MakeMail : 142
+185	getswitchar: <>
+186		RunShellCommand : 144
+187	gmtime: <>
+188		MakeHeaderIhave : 9
+189		MakeHeaderIhave_m : 10
+190		MakeMail : 142
+191	hash: int(), <hash.c 170>
+192		add_hash : 156
+193		search_hash : 111
+194	init_hash: int(), <hash.c 30>
+195		init_mid : 23
+196	init_mid: void*(), <mid.c 44>
+197	isindentakumail: int(), <denq.c 80>
+198		main : 24
+199	iskanji: <>
+200		fputsNJ : 153
+201	iskanji2: <>
+202		fputsNJ : 153
+203	loadnetdef: int(), <netdef.c 62>
+204		main : 24
+205	lseek: <>
+206		add_hash : 156
+207		search_hash : 111
+208	main: int(), <denq.c 131>
+209	malloc: <>
+210		Emalloc : 29
+211		NewString : 30
+212		cvoldtime : 37
+213		main : 24
+214		tfcreat : 31
+215	max: <>
+216		dirfopen : 129
+217		mkdirrec : 25
+218	midtime: long(), <mid.c 135>
+219	mkdir: <>
+220		mkdirrec : 25
+221	mkdirrec: void*(), <common.c 127>
+222		dirfopen : 129
+223		mkdirrec : 25
+224	mktemp: <>
+225		tfcreat : 31
+226	open: <>
+227		creat_init_hash : 46
+228		init_hash : 130
+229	opendeffile: struct*(), <netdef.c 34>
+230		loadnetdef : 85
+231	printf: <>
+232		main : 24
+233		printtime : 60
+234	printtime: void*(), <denq.c 71>
+235		main : 24
+236	puts: <>
+237		main : 24
+238	read: <>
+239		add_hash : 156
+240		search_hash : 111
+241	readmailq: <>
+242		main : 24
+243	reformnpath: <>
+244		main : 24
+245	remove: <>
+246		creat_hash : 27
+247		creat_init_hash : 46
+248		tfcloseall : 72
+249		tfremove : 75
+250	rewind: <>
+251		init_hash : 130
+252	rfc_asctime: char*(), <smtphead.c 109>
+253		MakeHeaderIhave : 9
+254		MakeHeaderIhave_m : 10
+255		MakeMail : 142
+256	search_hash: char*(), <hash.c 142>
+257		midtime : 42
+258	sprintf: <>
+259		GetMailSeq : 39
+260		MakeWrk : 78
+261		NewMqueueEntry : 7
+262		analyze_dentaku_sys : 36
+263		cvoldtime : 37
+264		main : 24
+265		rfc_asctime : <>
+266	stat: <>
+267		chkdfree : 67
+268		cvoldtime : 37
+269		filetimecomp : <>
+270		main : 24
+271	strcat: <>
+272		cvoldtime : 37
+273		main : 24
+274		opendeffile : 132
+275	strchr: <>
+276		MakeHeaderIhave : 9
+277		MakeHeaderIhave_m : 10
+278		midtime : 42
+279	strcmp: <>
+280		cvoldtime : 37
+281		isindentakumail : <>
+282		loadnetdef : 85
+283		main : 24
+284		tfopen : 74
+285		tfremove : 75
+286	strcntchr: unsigned int(), <ryujilib.c 48>
+287		analyze_dentaku_sys : 36
+288	strcpy: <>
+289		NewString : 30
+290		cvoldtime : 37
+291		dirfopen : 129
+292		init_hash : 130
+293		main : 24
+294		mkdirrec : 25
+295		opendeffile : 132
+296		search_hash : 111
+297	strcspn: <>
+298		MakeHeaderIhave : 9
+299		MakeHeaderIhave_m : 10
+300		analyze_dentaku_sys : 36
+301		cvoldtime : 37
+302		main : 24
+303	strdup: <>
+304		cvoldtime : 37
+305		loadnetdef : 85
+306		main : 24
+307		tfcreat : 31
+308	stripTrailSlant: char*(), <netdef.c 19>
+309		loadnetdef : 85
+310		opendeffile : 132
+311	strlen: <>
+312		NewString : 30
+313		cvoldtime : 37
+314		loadnetdef : 85
+315		main : 24
+316		search_hash : 111
+317		stripTrailSlant : <>
+318	strncat: <>
+319		MakeHeaderIhave : 9
+320		MakeHeaderIhave_m : 10
+321		cvoldtime : 37
+322	strncmp: <>
+323		cvoldtime : 37
+324		main : 24
+325		search_hash : 111
+326	strnicmp: <>
+327		cvoldtime : 37
+328		loadnetdef : 85
+329	strrchr: <>
+330		dirfopen : 129
+331		mkdirrec : 25
+332	strtok: <>
+333		SplitString : 18
+334		analyze_dentaku_sys : 36
+335		cvoldtime : 37
+336		loadnetdef : 85
+337		main : 24
+338		midtime : 42
+339	strtoke: char*(), <ryujilib.c 12>
+340	system: <>
+341		RunShellCommand : 144
+342	tell: <>
+343		add_hash : 156
+344	tfclose: void*(), <tempfile.c 95>
+345		config_mid : 55
+346	tfcloseall: void*(), <tempfile.c 140>
+347	tfcreat: struct*(), <tempfile.c 37>
+348		config_mid : 55
+349	tfopen: struct*(), <tempfile.c 66>
+350	tfremove: void*(), <tempfile.c 114>
+351		config_mid : 55
+352	time: <>
+353		MakeHeaderIhave : 9
+354		MakeHeaderIhave_m : 10
+355		MakeMail : 142
+356		errprintf : 59
+357		main : 24
+358	tzset: <>
+359		main : 24
+360	va_end: <>
+361		errprintf : 59
+362	va_start: <>
+363		errprintf : 59
+364	vsprintf: <>
+365		errprintf : 59
+366	write: <>
+367		add_hash : 156
+368		creat_init_hash : 46

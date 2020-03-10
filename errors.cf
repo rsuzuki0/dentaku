@@ -1,0 +1,14 @@
+alloc_error()
+{
+}
+
+disk_error()
+{
+}
+
+errprintf()
+{
+	va_start();
+	va_end();
+}
+

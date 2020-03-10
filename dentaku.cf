@@ -1,0 +1,60 @@
+analyze_dentaku_sys()
+{
+	strcntchr(+ryujilib.c);
+	strtoke(+ryujilib.c);
+}
+
+catnews_m()
+{
+	reformnpath(+wexlib.c);
+	NewMqueueEntry(+smtphead.c);
+	MakeMail(+smtphead.c);
+	fputsNJ(+kanji.c);
+}
+
+catnews_u()
+{
+	reformnpath(+wexlib.c);
+	NewMqueueEntry(+smtphead.c);
+	MakeMail(+smtphead.c);
+	fputsNJ(+kanji.c);
+	fgetsb(+ryujilib.c);
+}
+
+catnews_stdout()
+{
+	reformnpath(+wexlib.c);
+}
+
+make_ihave_news_m()
+{
+	midtime(+mid.c);
+	NewMqueueEntry(+smtphead.c);
+	MakeMail(+smtphead.c);
+	MakeHeaderIhave_m(+smtphead.c);
+}
+
+make_ihave_news_u()
+{
+	midtime(+mid.c);
+	NewMqueueEntry(+smtphead.c);
+	MakeMail(+smtphead.c);
+	MakeHeaderIhave(+smtphead.c);
+	fgetsb(+ryujilib.c);
+}
+
+main()
+{
+	loadnetdef(+netdef.c);
+	chkdfree(+derrors.c);
+	init_mid(+mid.c);
+	scanwrkfile(+wexlib.c);
+	analyze_dentaku_sys(+dentaku.c);
+	catnews_u(+dentaku.c);
+	catnews_m(+dentaku.c);
+	make_ihave_news_m(+dentaku.c);
+	make_ihave_news_u(+dentaku.c);
+	catnews_stdout(+dentaku.c);
+	close_mid(+mid.c);
+}
+

@@ -1,0 +1,6 @@
+chkdfree()
+{
+	getdfree();
+	errprintf(+errors.c);
+}
+

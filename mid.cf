@@ -1,0 +1,64 @@
+init_mid()
+{
+	init_hash(+hash.c);
+	config_mid(+mid.c);
+	close_hash(+hash.c);
+	filetimecomp(+mid.c);
+	errprintf(+errors.c);
+	init_hash(+hash.c);
+	config_mid(+mid.c);
+	close_hash(+hash.c);
+	init_hash(+hash.c);
+	errprintf(+errors.c);
+}
+
+close_mid()
+{
+	close_hash(+hash.c);
+}
+
+config_mid()
+{
+	tfcreat(+tempfile.c);
+	tfclose(+tempfile.c);
+	creat_hash(+hash.c);
+	errprintf(+errors.c);
+	tfremove(+tempfile.c);
+}
+
+add_mid()
+{
+	add_hash(+hash.c);
+}
+
+srch_mid()
+{
+	search_hash(+hash.c);
+}
+
+midopen()
+{
+}
+
+midtime()
+{
+	cvoldtime(+wexlib.c);
+}
+
+midrm()
+{
+	search_hash(+hash.c);
+}
+
+midlckopen()
+{
+}
+
+midlckrm()
+{
+}
+
+filetimecomp()
+{
+}
+

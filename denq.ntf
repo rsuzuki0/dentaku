@@ -1,0 +1,43 @@
+.so @a:\usr\bin\ntf\pri.ntf
+.ll 72
+.article_style
+.ex CHAPINDENT=0
+.ex SECINDENT=0
+.ex PARATOP=0
+.ex PARAIN=0
+.ex SECTOP=1
+.ex CHAPTOP=0
+.ex SECBOTTOM=0
+.in 5
+.mh :DENq(1):Terakoya News System User's Manual:DENq(1):
+.of :Terakoya News System::%:
+.ef :%::Terakoya News System:
+.SH 名称
+.p DENq - DENTAKU queue と mail queue の状態を報告する
+.SH 形式
+denq [-v] [hostname...]
+.SH 解説
+.p DENq はその時点での DENTAKU の queue（バッチファイル）と mqueue の
+ステータスを報告します。mqueue のステータスは DENTAKU が enqueue した
+データに限って集計・報告されます。
+
+.p -v を付けて起動するとヴァージョンを表示して直ちに終了します。
+
+.p 引数として hostname を指定することができます。指定した場合は
+指定した hostname に対する queue に限って集計・報告されます。
+
+.p DENq は正常に終了したときは 0 を返します。異常の時は 1 以上の数を
+返します。
+.SH 環境変数
+.p ETC, TMP, TZ
+.SH ファイル
+.p $ETC/network.def 又は /etc/network.def 又は /network.def, 
+その他 soroban や DENTAKU が参照若しくは生成・更新するもの。
+.SH 関連項目
+.p soroban(1) loadnetdef(3) yomikaki(1) dashi(1) poi(1)
+.p sys(5) network.def(5) <16810.3375@cc.msr.prug.or.jp>
+.p DENTAKU(1)
+.SH 著者
+.p wex@jf7wex.sdj.miyagi.prug.or.jp (Ryuji Suzuki)
+.p (c) 1992 Ryuji Suzuki.
+.p (c) 1991 HOSAKA, E., JP1FOC

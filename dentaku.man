@@ -1,0 +1,132 @@
+
+
+DENTAKU(1)         Terakoya News System User's Manual         DENTAKU(1)
+
+
+
+名称
+     dentaku - ニュースの配送
+
+形式
+     dentaku [-V] [-c] [-v] [hostname...]
+
+解説
+     dentaku は Version 3 以降の soroban(1) と共に寺子屋ニュースシステム
+     を形成します。
+
+     -v を付けて起動するとヴァージョンを表示して直ちに終了します。
+
+     -V を付けて起動すると動作を逐一表示します。-V が指定されず、 エラー
+     が起こらない場合は DENTAKU は何も表示しません。
+
+     引数として hostname を指定することができます。
+
+     DENTAKU  は soroban が生成したバッチファイルをもとに、sys(5) を参照
+     して一定の規則に基づいてニュースをメールにして隣接するサイトに送り
+     ます。
+
+     sys には soroban に対する指示のほかに dentaku  に対する指示も書けま
+     す。
+     sys の dentaku 行の書式は以下のとおりです。
+
+          DestHost:DestUser:BatchFile:Mode[Time]:Size:n
+
+     DestUser@DestHost が隣接サイトのニュースシステムです。BatchFileはバ
+     ッチファイルの名前で [Terakoya.libDir] からの相対パスです。
+
+     Mode は以下のものがあります。
+
+        i) m - ニュースをメールとして送ります。(F)
+
+       ii) i - ihave コントロールメッセージを送ります。(M)
+
+      iii) u - UUCP のフォーマットで m と同じ機能をします。(F)
+
+       iv) U - UUCP のフォーマットで i と同じ機能をします。(M)
+
+        v) c - ニュースを結合して標準出力へ書き出します。(F)
+
+     () 内のものは対応する soroban 行でのオプションです。
+
+     [iU]  オプションは続けて時間を指定します。この時間は soroban でのニ
+     ュースの処理から ihave の発行まで最低遅らせるべき時間で、単位は秒で
+     す。この機能は標準で冗長 ihave を実装したものですが、必要ない時は 0
+     を設定します。
+
+     Size は１つのメールの最大の大きさです。DENTAKU はこの大きさを越えな
+     い範囲で複数のニュースを１つのメールに結合して送ります。 ここで指定
+     した値を単独で越えるニュースがあった場合は単独でメールに格納されて
+     送られます。結合を許したくない場合は 0 を指定します。単位はバイトで
+     す。
+
+
+
+Terakoya News System                                                   1
+
+
+
+
+DENTAKU(1)         Terakoya News System User's Manual         DENTAKU(1)
+
+
+     n  は、DestUser@DestHost へのメールの mail queue での最大許容個数で
+     す。この値を越えない範囲で DENTAKU はメールを生成します。DENTAKU は
+     １回の起動で１行の DENTAKU 行につき１つのメールを生成します。
+
+     DENTAKU 行の 'c' オプションは ampr.binaries  の自動解凍や各種の注文
+     や請求の自動的な集計に使用できます。また、UUCP のフォーマットでメー
+     ルを生成すれば Cnews サイトと直接接続して複数のニュースが結合された
+     形のメールを送ることができます。
+
+     起動オプションとして '-c' を指定すると 'c' オプションの行だけが機能
+     します。通常はこの逆で 'c' オプション以外の行だけが機能します。
+
+     起動オプションとして  hostname を指定するとその hostname に対応する
+     DENTAKU 行しか実行しません。 hostname  は短いホストネームを指定しま
+     す。 この機能をクロックデーモンと組み合わせて一つの回線をおおまかに
+     時分割して効率的に利用することができます。
+
+診断
+     DENTAKU は正常に終了したときは 0 を返します。異常の時は 1  以上の数
+     を返します。
+
+環境変数
+     ETC, TMP, TZ
+
+ファイル
+     $ETC/network.def 又は /etc/network.def 又は /network.def,
+     [Terakoya.libDir]/sys, [Terakoya.libDir]/history,
+     [Terakoya.libDir]/history.idx, [Terakoya.batchDir]/BATCHFILE
+
+備考
+     Terakoya.man に詳細で具体的な説明があります。
+
+関連項目
+     soroban(1) loadnetdef(3) yomikaki(1) dashi(1) poi(1)
+     sys(5) network.def(5) <16810.3375@cc.msr.prug.or.jp>
+     DENq(1)
+
+著者
+     wex@jf7wex.sdj.miyagi.prug.or.jp (Ryuji Suzuki)
+     (c) 1992 Ryuji Suzuki.
+     (c) 1988 - 1992 Sigeki Matsushima, Dai Yokota, Akihiko Taniguchi,
+                       Akiyoshi Kamide.
+     (c) 1991 HOSAKA, E., JP1FOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2                                                   Terakoya News System
+
+

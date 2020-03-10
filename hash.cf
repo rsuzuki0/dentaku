@@ -1,0 +1,33 @@
+init_hash()
+{
+}
+
+close_hash()
+{
+}
+
+creat_init_hash()
+{
+}
+
+creat_hash()
+{
+	creat_init_hash(+hash.c);
+	add_hash(+hash.c);
+}
+
+add_hash()
+{
+	hash(+hash.c);
+	tell();
+}
+
+search_hash()
+{
+	hash(+hash.c);
+}
+
+hash()
+{
+}
+

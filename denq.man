@@ -1,0 +1,66 @@
+
+
+DENq(1)            Terakoya News System User's Manual            DENq(1)
+
+
+
+名称
+     DENq - DENTAKU queue と mail queue の状態を報告する
+
+形式
+     denq [-v] [hostname...]
+
+解説
+     DENq はその時点での DENTAKU の queue（バッチファイル）と mqueue  の
+     ステータスを報告します。mqueue のステータスは DENTAKU が enqueue し
+     たデータに限って集計・報告されます。
+
+     -v を付けて起動するとヴァージョンを表示して直ちに終了します。
+
+     引数として  hostname を指定することができます。指定した場合は指定し
+     た hostname に対する queue に限って集計・報告されます。
+
+     DENq は正常に終了したときは 0 を返します。異常の時は 1 以上の数を返
+     します。
+
+環境変数
+     ETC, TMP, TZ
+
+ファイル
+     $ETC/network.def 又は  /etc/network.def  又は  /network.def, その他
+     soroban や DENTAKU が参照若しくは生成・更新するもの。
+
+関連項目
+     soroban(1) loadnetdef(3) yomikaki(1) dashi(1) poi(1)
+     sys(5) network.def(5) <16810.3375@cc.msr.prug.or.jp>
+     DENTAKU(1)
+
+著者
+     wex@jf7wex.sdj.miyagi.prug.or.jp (Ryuji Suzuki)
+     (c) 1992 Ryuji Suzuki.
+     (c) 1991 HOSAKA, E., JP1FOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terakoya News System                                                   1
+
+

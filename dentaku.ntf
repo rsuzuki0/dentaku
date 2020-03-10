@@ -1,0 +1,105 @@
+.so @a:\usr\bin\ntf\pri.ntf
+.ll 72
+.article_style
+.ex CHAPINDENT=0
+.ex SECINDENT=0
+.ex PARATOP=0
+.ex PARAIN=0
+.ex SECTOP=1
+.ex CHAPTOP=0
+.ex SECBOTTOM=0
+.in 5
+.mh :DENTAKU(1):Terakoya News System User's Manual:DENTAKU(1):
+.of :Terakoya News System::%:
+.ef :%::Terakoya News System:
+.SH 名称
+.p dentaku - ニュースの配送
+.SH 形式
+dentaku [-V] [-c] [-v] [hostname...]
+.SH 解説
+.p dentaku は Version 3 以降の soroban(1) と共に寺子屋ニュースシステムを
+形成します。
+
+.p -v を付けて起動するとヴァージョンを表示して直ちに終了します。
+
+.p  -V を付けて起動すると動作を逐一表示します。-V が指定されず、
+エラーが起こらない場合は DENTAKU は何も表示しません。
+
+.p 引数として hostname を指定することができます。
+
+.p DENTAKU は soroban が生成したバッチファイルをもとに、
+sys(5) を参照して一定の規則に基づいてニュースをメールにして
+隣接するサイトに送ります。
+
+.p sys には soroban に対する指示のほかに dentaku に対する指示も書けます。
+.p sys の dentaku 行の書式は以下のとおりです。
+.quote
+.p DestHost:DestUser:BatchFile:Mode[Time]:Size:n
+.quoteend
+.p DestUser@DestHost が隣接サイトのニュースシステムです。BatchFile
+はバッチファイルの名前で [Terakoya.libDir] からの相対パスです。
+
+.p Mode は以下のものがあります。
+.item roman | rpare
+m - ニュースをメールとして送ります。(F)
+.itemnr
+i - ihave コントロールメッセージを送ります。(M)
+.itemnr
+u - UUCP のフォーマットで m と同じ機能をします。(F)
+.itemnr
+U - UUCP のフォーマットで i と同じ機能をします。(M)
+.itemnr
+c - ニュースを結合して標準出力へ書き出します。(F)
+.itemend
+.p  () 内のものは対応する soroban 行でのオプションです。
+
+.p [iU] オプションは続けて時間を指定します。この時間は soroban での
+ニュースの処理から ihave の発行まで最低遅らせるべき時間で、単位は
+秒です。この機能は標準で冗長 ihave を実装したものですが、
+必要ない時は 0 を設定します。
+
+.p Size は１つのメールの最大の大きさです。DENTAKU はこの大きさを越えない範囲で
+複数のニュースを１つのメールに結合して送ります。
+ここで指定した値を単独で越えるニュースがあった場合は
+単独でメールに格納されて送られます。
+結合を許したくない場合は 0 を指定します。単位はバイトです。
+
+.p n は、DestUser@DestHost へのメールの mail queue での最大許容個数です。
+この値を越えない範囲で DENTAKU はメールを生成します。
+DENTAKU は １回の起動で１行の DENTAKU 行につき１つのメールを
+生成します。
+
+.p DENTAKU 行の 'c' オプションは ampr.binaries の自動解凍や
+各種の注文や請求の自動的な集計に使用できます。また、UUCP のフォーマットで
+メールを生成すれば Cnews サイトと直接接続して複数のニュースが結合された
+形のメールを送ることができます。
+
+.p 起動オプションとして '-c' を指定すると 'c' オプションの行だけが機能し
+ます。通常はこの逆で 'c' オプション以外の行だけが機能します。
+
+.p 起動オプションとして hostname を指定するとその hostname に
+対応する DENTAKU 行しか実行しません。hostname は短いホストネームを
+指定します。この機能をクロックデーモンと組み合わせて一つの回線を
+おおまかに時分割して効率的に利用することができます。
+.SH 診断
+.p DENTAKU は正常に終了したときは 0 を返します。異常の時は 1 以上の数を
+返します。
+.SH 環境変数
+.p ETC, TMP, TZ
+.SH ファイル
+.p $ETC/network.def 又は /etc/network.def 又は /network.def, 
+.p [Terakoya.libDir]/sys, [Terakoya.libDir]/history, 
+.p [Terakoya.libDir]/history.idx, [Terakoya.batchDir]/BATCHFILE
+.SH 備考
+.p Terakoya.man に詳細で具体的な説明があります。
+.SH 関連項目
+.p soroban(1) loadnetdef(3) yomikaki(1) dashi(1) poi(1)
+.p sys(5) network.def(5) <16810.3375@cc.msr.prug.or.jp>
+.p DENq(1)
+.SH 著者
+.p wex@jf7wex.sdj.miyagi.prug.or.jp (Ryuji Suzuki)
+.p (c) 1992 Ryuji Suzuki.
+.p (c) 1988 - 1992 Sigeki Matsushima, Dai Yokota, Akihiko Taniguchi,
+.br
+                  Akiyoshi Kamide.
+.p (c) 1991 HOSAKA, E., JP1FOC

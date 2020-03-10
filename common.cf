@@ -1,0 +1,61 @@
+ReplaceChar()
+{
+}
+
+alloc_error()
+{
+}
+
+Emalloc()
+{
+	alloc_error(+errors.c);
+}
+
+NewString()
+{
+}
+
+SplitString()
+{
+	NewString(+common.c);
+}
+
+DeleteLastSlash()
+{
+}
+
+CountLine()
+{
+}
+
+FopenToRead()
+{
+}
+
+FopenToWrite()
+{
+}
+
+mkdirrec()
+{
+	mkdir();
+	max();
+	mkdirrec(+common.c);
+	mkdir();
+}
+
+dirfopen()
+{
+	max();
+	mkdirrec(+common.c);
+}
+
+copy_file()
+{
+}
+
+RunShellCommand()
+{
+	getswitchar();
+}
+

@@ -1,0 +1,16 @@
+stripTrailSlant()
+{
+}
+
+opendeffile()
+{
+	stripTrailSlant(+netdef.c);
+}
+
+loadnetdef()
+{
+	opendeffile(+netdef.c);
+	fnsplit();
+	stripTrailSlant(+netdef.c);
+}
+

@@ -1,0 +1,278 @@
+1	ReplaceChar: char*(), <common.c 19>
+2	Emalloc: long(), <common.c 40>
+3		malloc: <>
+4		alloc_error: void*(), <errors.c 23>
+5			fprintf: <>
+6			exit: <>
+7			errprintf: void*(), <errors.c 37>
+8				va_start: <>
+9				vsprintf: <>
+10				time: <>
+11				ctime: <>
+12				fputs: <>
+13				va_end: <>
+14	SplitString: void*(), <common.c 67>
+15		strtok: <>
+16		NewString: char*(), <common.c 51>
+17			strlen: <>
+18			malloc: 3
+19			alloc_error: 4
+20			strcpy: <>
+21	DeleteLastSlash: char*(), <common.c 76>
+22	CountLine: unsigned int(), <common.c 93>
+23	FopenToRead: struct*(), <common.c 103>
+24		fopen: <>
+25		fprintf: 5
+26	FopenToWrite: struct*(), <common.c 115>
+27		fopen: 24
+28		fprintf: 5
+29	dirfopen: struct*(), <common.c 145>
+30		fopen: 24
+31		strcpy: 20
+32		max: <>
+33		strrchr: <>
+34		mkdirrec: void*(), <common.c 127>
+35			access: <>
+36			mkdir: <>
+37			strcpy: 20
+38			strrchr: 33
+39			max: 32
+40			mkdirrec: 34
+41		fprintf: 5
+42	copy_file: int(), <common.c 169>
+43		fgets: <>
+44		fputs: 12
+45		fprintf: 5
+46	RunShellCommand: int(), <common.c 184>
+47		getswitchar: <>
+48		fprintf: 5
+49		system: <>
+50	main: int(), <denq.c 131>
+51		loadnetdef: int(), <netdef.c 62>
+52			opendeffile: struct*(), <netdef.c 34>
+53				getenv: <>
+54				strcpy: 20
+55				stripTrailSlant: char*(), <netdef.c 19>
+56					strlen: 17
+57				strcat: <>
+58				fopen: 24
+59			fnsplit: <>
+60			fgets: 43
+61			strlen: 17
+62			fprintf: 5
+63			strtok: 15
+64			strcmp: <>
+65			strnicmp: <>
+66			stripTrailSlant: 55
+67			strdup: <>
+68			exit: 6
+69			fclose: <>
+70		fputs: 12
+71		exit: 6
+72		getenv: 53
+73		fprintf: 5
+74		strcpy: 20
+75		strcat: 57
+76		strdup: 67
+77		strlen: 17
+78		malloc: 3
+79		tzset: <>
+80		readmailq: <>
+81		sprintf: <>
+82		fopen: 24
+83		printf: <>
+84		analyze_dentaku_sys: int(), <denq.c 91>
+85			fgets: 43
+86			strcntchr: unsigned int(), <ryujilib.c 48>
+87			strtok: 15
+88			atol: <>
+89			atoi: <>
+90			strcspn: <>
+91			sprintf: 81
+92		strcspn: 90
+93		strncmp: <>
+94		access: 35
+95		puts: <>
+96		stat: <>
+97		printtime: void*(), <denq.c 71>
+98			ctime: 11
+99			printf: 83
+100		fgets: 43
+101		strtok: 15
+102		reformnpath: <>
+103		atol: 88
+104		fclose: 69
+105		isindentakumail: int(), <denq.c 80>
+106			strcmp: 64
+107		strcmp: 64
+108		time: 10
+109	chkdfree: int(), <derrors.c 13>
+110		stat: 96
+111		getdfree: <>
+112		errprintf: 7
+113		fputs: 12
+114		exit: 6
+115	disk_error: void*(), <errors.c 30>
+116		errprintf: 7
+117		exit: 6
+118	fputsNJ: void*(), <kanji.c 18>
+119		iskanji2: <>
+120		iskanji: <>
+121		fputs: 12
+122		fputc: <>
+123	init_mid: void*(), <mid.c 44>
+124		init_hash: int(), <hash.c 30>
+125			strcpy: 20
+126			fopen: 24
+127			rewind: <>
+128			open: <>
+129		config_mid: void*(), <mid.c 72>
+130			tfcreat: struct*(), <tempfile.c 37>
+131				malloc: 3
+132				alloc_error: 4
+133				strdup: 67
+134				mktemp: <>
+135				fopen: 24
+136				errprintf: 7
+137				exit: 6
+138			tfclose: void*(), <tempfile.c 95>
+139				fclose: 69
+140				errprintf: 7
+141			creat_hash: int(), <hash.c 71>
+142				creat_init_hash: int(), <hash.c 52>
+143					close: <>
+144					remove: <>
+145					open: 128
+146					write: <>
+147				fclose: 69
+148				remove: 144
+149				fopen: 24
+150				fgets: 43
+151				fputs: 12
+152				add_hash: void*(), <hash.c 105>
+153					hash: int(), <hash.c 170>
+154					lseek: <>
+155					read: <>
+156					fseek: <>
+157					ftell: <>
+158					fputs: 12
+159					tell: <>
+160					write: 146
+161			errprintf: 7
+162			exit: 6
+163			tfremove: void*(), <tempfile.c 114>
+164				strcmp: 64
+165				fclose: 69
+166				remove: 144
+167				free: <>
+168				errprintf: 7
+169		close_hash: void*(), <hash.c 45>
+170			fclose: 69
+171			close: 143
+172		filetimecomp: long(), <mid.c 201>
+173			stat: 96
+174		access: 35
+175		errprintf: 7
+176		exit: 6
+177	close_mid: void*(), <mid.c 66>
+178		close_hash: 169
+179	midtime: long(), <mid.c 135>
+180		search_hash: char*(), <hash.c 142>
+181			strlen: 17
+182			strncmp: 93
+183			strcpy: 20
+184			hash: 153
+185			lseek: 154
+186			read: 155
+187			fseek: 156
+188			fgets: 43
+189		strtok: 15
+190		strchr: <>
+191		cvoldtime: long(), <wexlib.c 34>
+192			atoi: 89
+193			strncmp: 93
+194			strnicmp: 65
+195			sprintf: 81
+196			findnext: <>
+197			findfirst: <>
+198			fopen: 24
+199			fgets: 43
+200			fclose: 69
+201			strtok: 15
+202			strcspn: 90
+203			strlen: 17
+204			strcmp: 64
+205			malloc: 3
+206			fputs: 12
+207			exit: 6
+208			strdup: 67
+209			strncat: <>
+210			stat: 96
+211			strcat: 57
+212			strcpy: 20
+213		atol: 88
+214	strtoke: char*(), <ryujilib.c 12>
+215	fgetsb: char*(), <ryujilib.c 63>
+216		fread: <>
+217	NewMqueueEntry: char*(), <smtphead.c 142>
+218		GetMailSeq: long(), <smtphead.c 83>
+219			sprintf: 81
+220			fopen: 24
+221			fprintf: 5
+222			exit: 6
+223			fgets: 43
+224			atol: 88
+225			freopen: <>
+226			fclose: 69
+227		MakeWrk: void*(), <smtphead.c 125>
+228			sprintf: 81
+229			fopen: 24
+230			fprintf: 5
+231			exit: 6
+232			fclose: 69
+233		sprintf: 81
+234	MakeMail: void*(), <smtphead.c 154>
+235		time: 10
+236		gmtime: <>
+237		rfc_asctime: char*(), <smtphead.c 109>
+238			sprintf: 81
+239		fprintf: 5
+240		getpid: <>
+241		fputc: 122
+242	MakeHeaderIhave: void*(), <smtphead.c 181>
+243		getenv: 53
+244		time: 10
+245		gmtime: 236
+246		strcspn: 90
+247		strchr: 190
+248		strncat: 209
+249		fprintf: 5
+250		rfc_asctime: 237
+251		GetSeq: int(), <smtphead.c 55>
+252			fopen: 24
+253			fprintf: 5
+254			fgets: 43
+255			fclose: 69
+256			atoi: 89
+257		fputc: 122
+258	MakeHeaderIhave_m: void*(), <smtphead.c 216>
+259		getenv: 53
+260		time: 10
+261		gmtime: 236
+262		strcspn: 90
+263		strchr: 190
+264		strncat: 209
+265		fprintf: 5
+266		rfc_asctime: 237
+267		GetSeq: 251
+268		fputs: 12
+269	tfopen: struct*(), <tempfile.c 66>
+270		strcmp: 64
+271		errprintf: 7
+272		fclose: 69
+273		fopen: 24
+274		exit: 6
+275	tfcloseall: void*(), <tempfile.c 140>
+276		fclose: 69
+277		remove: 144
+278		errprintf: 7

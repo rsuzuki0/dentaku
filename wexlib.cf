@@ -1,0 +1,24 @@
+cvoldtime()
+{
+}
+
+scanwrkfile()
+{
+	findnext();
+	findfirst();
+}
+
+readmailq()
+{
+	findnext();
+	findfirst();
+}
+
+reformnpath()
+{
+}
+
+isnewspath()
+{
+}
+

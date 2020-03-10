@@ -1,0 +1,24 @@
+printtime()
+{
+}
+
+isindentakumail()
+{
+}
+
+analyze_dentaku_sys()
+{
+	strcntchr(+ryujilib.c);
+}
+
+main()
+{
+	loadnetdef(+netdef.c);
+	readmailq(+wexlib.c);
+	analyze_dentaku_sys(+dentaku.c);
+	printtime(+denq.c);
+	reformnpath(+wexlib.c);
+	isindentakumail(+denq.c);
+	printtime(+denq.c);
+}
+

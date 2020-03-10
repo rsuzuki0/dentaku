@@ -1,0 +1,40 @@
+GetSeq()
+{
+}
+
+GetMailSeq()
+{
+}
+
+rfc_asctime()
+{
+}
+
+MakeWrk()
+{
+}
+
+NewMqueueEntry()
+{
+	GetMailSeq(+smtphead.c);
+	MakeWrk(+smtphead.c);
+}
+
+MakeMail()
+{
+	rfc_asctime(+smtphead.c);
+	getpid();
+}
+
+MakeHeaderIhave()
+{
+	rfc_asctime(+smtphead.c);
+	GetSeq(+smtphead.c);
+}
+
+MakeHeaderIhave_m()
+{
+	rfc_asctime(+smtphead.c);
+	GetSeq(+smtphead.c);
+}
+
